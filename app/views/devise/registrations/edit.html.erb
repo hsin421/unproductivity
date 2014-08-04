@@ -1,58 +1,105 @@
-<h2> Choose your content providers </h2>
-<%= form_tag("/preference", method: "post") do %>
-<%= check_box_tag(:huffP) %>
-<%= label_tag(:huffP, "Huffington Post") %>
-<%= check_box_tag(:mash) %>
-<%= label_tag(:mash, "Mashable") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project U</title>
+  
+  <link href="/assets/login.css" media="screen" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:800,600,400' rel='stylesheet' type='text/css'>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<%= check_box_tag(:bloomberg) %>
-<%= label_tag(:bloomberg, "Bloomberg") %>
+</head>
+<body>
+  <div id="edit_maincontainer">
+    <header>
+      <a href="/"><img src="/images/logo-black.png" style="height:20px;margin:18px 0px 0px 18px" alt=""></a>
+      <nav>
+        <ul>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
+          <li>Features</li>
+          <li>Get the App</li>
+          <li>Help</li>
+        </ul>
+      </nav>
+      <% if notice %><p class="notice" ><%= notice %></p><% end %>
+      <% if alert %><p class="alert"><%= alert %></p><% end %>
+    </header>
+    <div id="edit_contentholder">
+      <h2 class="editH2"> Choose your content providers </h2>
+      <%= form_tag("/preference", method: "post") do %>
+        <%= check_box_tag(:huffP) %>
+        <%= label_tag(:huffP, "Huffington Post") %>
+        <br>
+        <%= check_box_tag(:mash) %>
+        <%= label_tag(:mash, "Mashable") %>
+        <br>
+        <%= check_box_tag(:bloomberg) %>
+        <%= label_tag(:bloomberg, "Bloomberg") %>
+        <br>
+        <%= check_box_tag(:wired) %>
+        <%= label_tag(:wired, "Wired") %>
+        <br>
+        <%= check_box_tag(:nyt) %>
+        <%= label_tag(:nyt, "New York Times") %>
+        <br>
+        <%= check_box_tag(:npr) %>
+        <%= label_tag(:npr, "NPR") %>
+        <br>
+        <%= check_box_tag(:jcrew) %>
+        <%= label_tag(:jcrew, "J Crew Women") %>
+        <br><br>
+        <%= submit_tag("Save", class: 'editButton')%>
+      <% end %>
 
-<%= check_box_tag(:wired) %>
-<%= label_tag(:wired, "Wired") %>
+      <br>
+      <br>
+      <h2 class="editH2">Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= check_box_tag(:nyt) %>
-<%= label_tag(:nyt, "New York Times") %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= check_box_tag(:npr) %>
-<%= label_tag(:npr, "NPR") %>
+        <div><%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %></div>
+        <br>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+        <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= f.password_field :password, autocomplete: "off"%></div>
+        <br>
+        <div><%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+        <br>
+        <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+          <%= f.password_field :current_password, autocomplete: "off" %></div>
+        <br>
+        <div><%= f.submit "Update", :class => 'editButton'  %></div>
+      <% end %>
+      <br><br>
+      <h2 class="editH2">Cancel my account</h2>
 
-<%= check_box_tag(:jcrew) %>
-<%= label_tag(:jcrew, "J Crew Women") %>
-<%= submit_tag("Save") %>
-<% end %>
+      <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'editButton' %></p>
+      <br>
+      <!-- <div class="editLink"><%# link_to "Back", :back %></div> -->
+    </div>
+    <footer id="editFooter" align="center">
+      <h5>Terms</h5>
+      <h5>|</h5>
+      <h5>Privacy</h5>
+    </footer>
+  </div>
+</body>
+</html>
 
-<br>
-<br>
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Update" %></div>
-<% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
 
-<h3>Choose Your Content</h3>
 

@@ -68,7 +68,6 @@
             <li class="dropdownTitle">Folders</li>
               <ul>
                 <% @user.content_providers.each do | source | %>
-                <!-- EACH WITH INDEX?? -->
                       <% if source.name == "wired" %>
                         <% abbrev = "wired" %>
                         <%= "<li class='dropdownItem'><a href='/home/mach/#{abbrev}'>Wired</a></li>".html_safe %>
@@ -92,13 +91,7 @@
                         <%= "<li class='dropdownItem'><a href='/home/mach/#{abbrev}'>J Crew Women</a></li>".html_safe %>
                       <% end %>
                 <% end %>
-               <!-- <li class="dropdownItem"><a href="/home/mach/huffP">Huffington Post</a></li>
-                <li class="dropdownItem"><a href="/home/mach/mash">Mashable</a></li>
-                <li class="dropdownItem"><a href="/home/mach/bloomberg">Bloomberg</a></li>
-                <li class="dropdownItem"><a href="/home/mach/wired">Wired</a></li>
-                <li class="dropdownItem"><a href="/home/mach/nyt">New York Times</a></li>
-                <li class="dropdownItem"><a href="/home/mach/npr">NPR</a></li> -->
-
+                <li class='dropdownItem'><%= link_to '+ Add Source', edit_user_registration_path %></li>
               </ul>
             <li>Trash</li>
             <li>Spam</li>

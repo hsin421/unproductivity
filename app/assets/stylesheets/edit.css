@@ -1,0 +1,88 @@
+#edit_maincontainer {
+	background: #2998F2;
+}
+
+#edit_contentholder {
+	padding: 30px;
+	height: 100%;
+}
+
+#editFooter {
+	width: 100%;
+	padding: 15px;
+	background-color: white;
+}
+
+.editH2 {
+	font-size: 25px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	color: white;
+	letter-spacing: 1px;
+}
+
+.editButton {
+	padding: 10px;
+}
+
+.editButton {
+	border: 1px solid #666;
+	border-radius: 4px;
+	background: -webkit-linear-gradient(top, #ccc, #999);
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 600;
+	color:white;
+	padding:10px;
+}
+
+.editButton a:visited {
+	color:white;
+}
+
+.editButton:hover {
+	background: -webkit-linear-gradient(top, #999, #ccc);
+}
+
+.editLink a {
+	color: white;
+}
+
+/*########################################
+############### NAV BAR ################*/
+header {
+	width:100%;
+	height: 60px;
+	background-color: white;
+	/*border:1px solid black;*/
+}
+
+header h1 {
+	float: left;
+	margin-top: 18px;
+	margin-left: 20px;
+	letter-spacing: 2px;
+	font-weight: 800;
+}
+
+nav {
+	width: 400px;
+	/*border:1px solid green;*/
+	float: right;
+	margin-top: 18px;
+	text-align: right;
+	margin-right: 5px;
+	background-color: white;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 13px;
+	font-weight: 300;
+}
+/*############# END NAV BAR ##############
+########################################*/
