@@ -62,6 +62,16 @@ $(document).on('ready page:load', function(){
         $("#inbox").show();
   });
 
+  // This slides the forms on the user edit page up and down
+  $("i").click(function(){
+   // alert("hi")
+    if ( $(this).next(".editForm").is(":hidden") ) {
+      $(this).next(".editForm").slideDown();
+    } else {
+      $(this).next(".editForm").slideUp();
+    }
+  });
+
 function clickable() {
     var stlg = parseInt($(".articles:last")[0].id.split("_")[1]) + 1;
     var myArray = [];
