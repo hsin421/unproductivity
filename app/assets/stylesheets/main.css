@@ -1,0 +1,442 @@
+/*########################################
+############### LOGIN BOX ################*/
+#login_contentholder {
+	width: 100%;
+	height: 665px;
+	/*border: 1px solid red;*/
+	background: url(../images/officecube.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#login_form {
+	width: 248px;
+	height: 452px;
+	border: 2px solid rgb(120,120,120);
+	float: right;
+	margin-top: 15px;
+	margin-right: 310px;
+	background-color: white;
+	border-radius: 5px;
+	/*display: none;*/
+}
+
+#login_form h1 {
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 2px;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+#login_form p {
+	margin-top: 10px;
+	font-size:13px;
+	font-weight: 400;
+}
+#email_id_box, #password_box {
+	width: 200px;
+	height: 28px;
+	border-style: solid;
+	border-color: rgb(200,200,200);
+	border-radius: 4px;
+	border-width: 1px;
+	margin-top: 14px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+#login_checkbox {
+	margin-top: 15px;
+	width: 120px;
+	/*border: 1px solid red;*/
+	font-size: 12px;
+	margin-right: 95px;
+}
+
+#login_submit_box {
+	width: 210px;
+	height: 30px;
+	border: 1px solid #008db2;
+	border-radius: 4px;
+	background: -webkit-linear-gradient(top, #00c9fe, #008db2);
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 800;
+	color:white;
+}
+
+#login_submit_box:hover {
+	background: #00a1cb;
+}
+#login_createaccount {
+	width: 210px;
+	height: 60px;
+	border-top: 1px solid rgb(200,200,200);
+	border-bottom: 1px solid rgb(200,200,200);
+	margin-top: 20px;
+	padding-top: 30px;
+}
+
+#login_createaccount a {
+	text-decoration: none;
+}
+
+#createaccount_button {
+	width: 210px;
+	height: 22px;
+	border: 1px solid #6b9c00;
+	border-radius: 4px;
+	background: -webkit-linear-gradient(top, #8fcf00, #6b9c00);
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 800;
+	color:white;
+	padding-top:8px;
+}
+
+#createaccount_button a:visited {
+	color:white;
+}
+
+#createaccount_button:hover {
+	background: #7db500;
+}
+/*############ END LOGIN BOX #############
+########################################*/
+
+
+
+
+
+
+
+
+
+/*########################################
+################ AD BOX ################*/
+#login_adspace {
+	width: 400px;
+	height: 300px;
+	/*border: 2px solid red;*/
+	float: left;
+	margin-left: 300px;
+	margin-top: 100px;
+	background-color: rgba(0,0,0,0.7);
+	/*border-width: 2px;
+	border-style: ridge;*/
+	border-radius: 5px;
+}
+
+#login_adspace h2 {
+	color:white;
+	font-weight: 800;
+	font-size: 70px;
+	margin-left: 30px;
+	margin-top: 20px;
+	letter-spacing: 4px;
+}
+
+#login_adspace h4 {
+	font-size: 20px;
+	font-weight: 400;
+	color: white;
+	margin-left: 30px;
+	margin-top: 8px;
+}
+
+#login_adspace h5 {
+	font-size: 30px;
+	font-weight: 800;
+	color: white;
+	line-height: 40px;
+}
+
+#login_sub_ad_box {
+	width: 320px;
+	height: 130px;
+	border: 2px dotted white;
+	margin-left: 30px;
+	margin-top: 12px;
+}
+
+#login_ad_button {
+	width: 80px;
+	height: 22px;
+	margin-left: 273px;
+	margin-top: 2px;
+	border: 1px solid red;
+	font-size: 12px;
+	padding-top: 8px;
+	background-color: #f18d05;
+	color: white;
+}
+/*################ END AD BOX ############
+########################################*/
+
+
+html, body {
+	min-width: 0;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+
+/* BEGIN RESPONSIVE NAV STYLING */
+/*#mainNav {
+	width: 100%;
+	position: fixed;
+	background-color: white;
+	margin: 0;
+	font-family: arial;
+}
+
+#navLinks {
+	display: inline-block;
+	float: right;
+	padding: 20px;
+}
+
+.navLink {
+	display: inline-block;
+	padding-top: 3px; 
+	margin: 0 0 0 15px;
+	font-size: 14px;
+}
+
+.navLink a {
+	color: #2998F2;
+}
+
+.navLink a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	height: 20px;
+	padding: 20px;
+}*/
+/* END RESPONSIVE NAV STYLING */
+
+/* ***************BEGIN HOMEPAGE STYLING*********** */
+#mainWrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -90px; /* the bottom margin is the negative value of the footer's height */
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+#mainWrapper p {
+	color: white;
+	font-size: 18px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	line-height: 25px;
+	font-weight: normal;
+}
+.homeLink {
+	color: #1F55F2;
+}
+.homeLink:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+#mainWrapper h1 {
+	font-size: 38px;
+}
+#mainWrapper h2 {
+	color: white;
+	font-size: 38px;
+	font-weight: 400;
+	margin-bottom: 22px;
+	text-transform: normal;
+}
+#mainWrapper h3 {
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	font-size: 28px;
+	font-weight: 400;
+	margin-bottom: 25px;
+	line-height: 24px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.homeButton {
+	border: 2px solid white;
+	border-radius: 8px;
+	background: rgba(255,255,255,0);
+	cursor: pointer;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 500;
+	color:white;
+	padding: 13px;
+	cursor: pointer;
+	display: inline-block;
+}
+.homeButton:hover {
+	background: rgba(0,0,0,.2);
+}
+.homeButtonBlack:hover {
+	background: rgba(255,255,255,.15);
+}
+
+/* WELCOME STYLING */
+#welcomeContent {
+	margin: 0 auto;
+	min-width: 350px;
+	max-width: 1020px;
+/*	height: 100%;*/
+	padding: 115px 20px 40px 20px;
+	overflow: auto;
+	text-align: left;
+}
+#welcomeWrapper, #aboutWrapper {
+	background: #2998F2;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+#leftCol {
+	padding-top: 40px;
+	width: 28%;
+	display: inline-block;
+	float: left;
+}
+.triWrapper {
+	width: 100%;
+	background-color: black;
+}
+#blueTriangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 50px 0 50px;
+	border-color: #2997f2 transparent transparent transparent;
+	margin: 0 auto;
+}
+.welcomeH1 {
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	font-size: 42px;
+	font-weight: 400;
+	margin-bottom: 22px;
+}
+#laptop {
+	display: inline-block;
+	float: right;
+	width: 71%;
+	min-width: 350px;
+}
+/* END WELCOME STYLING */
+
+/* BEGIN ABOUT SECTION STYLING*/
+#aboutWrapper {
+	background: black;
+}
+#aboutContent, #signupContent {
+	margin: 0 auto;
+	min-width: 350px;
+	max-width: 720px;
+	overflow: auto;
+	padding: 60px 20px 90px 20px;
+}
+.aboutH2 {
+	color: white;
+	font-size: 42px;
+	font-weight: 400;
+	margin-bottom: 22px;
+}
+/* END ABOUT SECTION STYLING*/
+
+/* BEGIN SIGN UP STYLING*/
+#signupWrapper {
+	background: #2997f2;
+}
+#signupContent p{
+	margin-bottom: 12px;
+}
+#blackTriangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 50px 0 50px;
+	border-color: black transparent transparent transparent;
+	margin: 0 auto;
+}
+.blackTriWrapper {
+	width: 100%;
+	background-color: #2997f2;
+}
+.signupTextInput {
+	min-width: 350px;
+	padding: 10px;
+	text-align: center;
+	border: none;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	font-size: 16px;
+	border: 2px white solid;
+}
+.signupTextInput:focus {
+	box-shadow: none;
+	outline: none;
+	border: 2px black solid;
+}
+.wideButton {
+	width: 350px;
+}
+
+.signupCheckbox {
+	border: none;
+	width: 15px;
+	height: 15px;
+	-webkit-appearance: none;
+}
+input[type="checkbox"]{
+	-webkit-appearance: none;
+	width: 12px;
+	height: 12px;
+	background-color: white;
+	border-radius: 2px;
+	border: 1px solid white;
+}
+input[type="checkbox"]:checked{
+	background: rgba(0,0,0,.5);
+}
+#loginForm {
+	display: none;
+}
+/* END SIGN UP STYLING*/
+
+/* BEGIN FOOTER STYLING */
+#mainFooter {
+	/*width: 100%;*/
+	padding: 20px;
+	background-color: black;
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+}
+.footerLink {
+	display: inline-block;
+}
+#mainFooter, .push {
+	height: 90px; /* '.push' must be the same height as 'footer' */
+}
+.push {
+	margin: 0;
+	padding: 0; 
+	height: 0;
+}
+/* END FOOTER STYLING */
+
+
+

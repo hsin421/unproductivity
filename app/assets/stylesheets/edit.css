@@ -97,17 +97,5 @@ html, body {
 	color: white;
 }
 
-/* BEGIN FOOTER STYLING */
-#mainFooter {
-	width: 100%;
-	padding: 20px;
-	background-color: black;
-	color: #666;
-	font-size: 12px;
-	text-align: center;
-}
-.footerLink {
-	display: inline-block;
-}
-/* END FOOTER STYLING */
+
 

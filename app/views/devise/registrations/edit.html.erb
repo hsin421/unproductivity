@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="min-width:0;">
 <head>
   <meta charset="UTF-8">
   <title>Project U</title>
@@ -10,86 +10,90 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
-<body>
+<body style="min-width:0;">
 
-  <nav id="mainNav">
-      <a href="/"><img id="logo" src="/images/logo-black.png" alt=""></a>
-      <ul id="navLinks">
-        <li class="navLink"><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
-        <li class="navLink"><a href="#">Inbox</a></li>
-        <li class="navLink"><a href="#">Help</a></li>
-      </ul>
-  </nav>
+  <div id="mainWrapper">
 
-  <div id="edit_maincontainer">
-      
+    <nav id="mainNav">
+        <a href="/"><img id="logo" src="/images/logo-black.png" alt=""></a>
+        <ul id="navLinks">
+          <li class="navLink"><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
+          <li class="navLink"><a href="#">Inbox</a></li>
+          <li class="navLink"><a href="#">Tutorial</a></li>
+        </ul>
+    </nav>
+
     <% if notice %><p class="notice" ><%= notice %></p><% end %>
     <% if alert %><p class="alert"><%= alert %></p><% end %>
 
-    <div id="edit_contentholder">
-      <h2 class="editH2"> Choose your content providers <i class="fa fa-plus-circle"></i><!-- <i class="fa fa-minus-circle"></i> --></h2>
-      <h4 class="editH4">Select the websites you would like to access via MachMail. These providers with then show up as "folders" in the MachMail template.</h4>
-      <div class="editForm">
-        <%= form_tag("/preference", method: "post") do %>
-          <%= check_box_tag(:huffP) %>
-          <%= label_tag(:huffP, "Huffington Post") %>
-          <br>
-          <%= check_box_tag(:mash) %>
-          <%= label_tag(:mash, "Mashable") %>
-          <br>
-          <%= check_box_tag(:bloomberg) %>
-          <%= label_tag(:bloomberg, "Bloomberg") %>
-          <br>
-          <%= check_box_tag(:wired) %>
-          <%= label_tag(:wired, "Wired") %>
-          <br>
-          <%= check_box_tag(:nyt) %>
-          <%= label_tag(:nyt, "New York Times") %>
-          <br>
-          <%= check_box_tag(:npr) %>
-          <%= label_tag(:npr, "NPR") %>
-          <br>
-          <%= check_box_tag(:jcrew) %>
-          <%= label_tag(:jcrew, "J Crew Women") %>
-          <br><br>
-          <%= submit_tag("Save", class: 'editButton')%>
-        <% end %>
-      </div>
+    <div id="edit_maincontainer">
 
-      <br>
-      <br>
-
-      <h2 class="editH2">Edit <%= resource_name.to_s.humanize %> <i class="fa fa-plus-circle"></i></h2>
-
-      <div class="editForm">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-          <%= devise_error_messages! %>
-
-          <div><%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %></div>
-          <br>
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <div id="edit_contentholder">
+        <h3> Choose your content providers <i class="fa fa-plus-circle"></i><!-- <i class="fa fa-minus-circle"></i> --></h3>
+        <p>Select the websites you would like to access via MachMail. These providers with then show up as "folders" in the MachMail template.</p>
+        <div class="editForm">
+          <%= form_tag("/preference", method: "post") do %>
+            <%= check_box_tag(:huffP) %>
+            <%= label_tag(:huffP, "Huffington Post") %>
+            <br>
+            <%= check_box_tag(:mash) %>
+            <%= label_tag(:mash, "Mashable") %>
+            <br>
+            <%= check_box_tag(:bloomberg) %>
+            <%= label_tag(:bloomberg, "Bloomberg") %>
+            <br>
+            <%= check_box_tag(:wired) %>
+            <%= label_tag(:wired, "Wired") %>
+            <br>
+            <%= check_box_tag(:nyt) %>
+            <%= label_tag(:nyt, "New York Times") %>
+            <br>
+            <%= check_box_tag(:npr) %>
+            <%= label_tag(:npr, "NPR") %>
+            <br>
+            <%= check_box_tag(:jcrew) %>
+            <%= label_tag(:jcrew, "J Crew Women") %>
+            <br><br>
+            <%= submit_tag("Save", class: 'homeButton')%>
           <% end %>
-          <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-            <%= f.password_field :password, autocomplete: "off"%></div>
-          <br>
-          <div><%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-          <br>
-          <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-            <%= f.password_field :current_password, autocomplete: "off" %></div>
-          <br>
-          <div><%= f.submit "Update", :class => 'editButton'  %></div>
-        <% end %>
-      </div>
-      <br><br>
-      <h2 class="editH2">Cancel my account <i class="fa fa-plus-circle"></i></h2>
+        </div>
 
-      <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'editButton' %></p>
-      <br>
-      <!-- <div class="editLink"><%# link_to "Back", :back %></div> -->
+        <br>
+        <br>
+
+        <h3>Edit <%= resource_name.to_s.humanize %> <i class="fa fa-plus-circle"></i></h3>
+
+        <div class="editForm">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div><%= f.email_field :email, class: 'signupTextInput' %></div>
+            <br>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+            <div><%= f.password_field :password, autocomplete: "off", placeholder: "password (leave blank to remain unchanged)", class: 'signupTextInput'%></div>
+            <br>
+            <div><%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "confirm password", class: 'signupTextInput' %></div>
+            <br>
+            <div><%= f.password_field :current_password, autocomplete: "off", placeholder: "current password (to confirm changes)", class: 'signupTextInput' %></div>
+            <br>
+            <div><%= f.submit "Update", class: 'homeButton' %></div>
+          <% end %>
+        </div>
+        <br><br>
+        <h3>Cancel my account <i class="fa fa-plus-circle"></i></h3>
+
+        <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'homeButton' %></p>
+        <br>
+        <!-- <div class="editLink"><%# link_to "Back", :back %></div> -->
+      </div>
+      
     </div>
+
+    
+    <div class="push"></div>
+
     <footer id="mainFooter">
       <ul id="footerLinks">
         <li class="footerLink">Terms</li>
@@ -97,7 +101,9 @@
         <li class="footerLink">Services</li>
       </ul>
     </footer>
+
   </div>
+
 </body>
 </html>
 

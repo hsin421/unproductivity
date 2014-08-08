@@ -1,77 +1,111 @@
+<!DOCTYPE html>
+<html style="min-width:0;" lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Project U</title>
+  <title>MachMail</title>
   
-  <link href="/assets/login.css" media="screen" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:800,400' rel='stylesheet' type='text/css'>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script>
-    $(document).ready(function(){
-      
-        $("#signup_form").show();
-      
-    });
-   </script>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:800,600,400' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+
 </head>
-<body>
-  <div id="login_maincontainer">
-    <header>
-      <h1>Mach Mail</h1>
-      <nav>
-        <ul>
-          <li>About Mail</li>
-          <li>Features</li>
-          <li>Get the App</li>
-          <li>Help</li>
-        </ul>
-      </nav>
-      <% if notice %><p class="notice" ><%= notice %></p><% end %>
-    <% if alert %><p class="alert"><%= alert %></p><% end %>
-    </header>
-    <div id="login_contentholder">
-      <div id="login_adspace">
-       <img src="/images/logo-white.png" style="width:380px;padding:25px 25px 10px 25px;" alt="">
-        <h4>READ WHAT YOU WANT TO READ</h4>
-        <div id="login_sub_ad_box" align="center">
-          <h5>- FIND -</h5>
-          <h5>- READ -</h5>
-          <h5>- SLACK -</h5>
+<body style="min-width:0;">
+
+  <div id="mainWrapper">
+  
+  <nav id="mainNav">
+      <a href="/"><img id="logo" src="/images/logo-black.png" alt="MachMail"></a>
+      <ul id="navLinks">
+        <li class="navLink"><a href="#">Sign In / Sign Up</a></li>
+      </ul>
+  </nav>
+
+  <% if notice %><p class="notice" ><%= notice %></p><% end %>
+  <% if alert %><p class="alert"><%= alert %></p><% end %>
+
+  <!-- <nav id="mainNav">
+      <a href="/"><img id="logo" src="images/logo-black.png" alt=""></a>
+      <ul id="navLinks">
+        <li class="navLink"><a href="#">Sign In</a></li>
+        <li class="navLink"><a href="#">Sign Up</a></li>
+      </ul>
+  </nav> -->
+
+  <div id="welcomeWrapper">
+    <div id="welcomeContent">
+        <div id="leftCol">
+          <h1 class="welcomeH1">Welcome<br>to MachMail</h1>
+          <h4 class="welcomeH3">The best way to look productive, since actually being productive.</h4>
+          <div class="homeButton">See What We Mean</div>
         </div>
-        <div id="login_ad_button" align="center">Sign up now</div>
-      </div>
-     
-      <div id="signup_form" align="center">
-        <h1>Mach Mail</h1>
-        <h3>Get started with your new Mach speed mail!</h3>
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div>
-  <%= f.email_field :email, autofocus: true, placeholder:"email", id:"signup_email" %></div>
-
-  <div>
-    <%= f.password_field :password, autocomplete: "off", placeholder:"password", id:"signup_password" %></div>
-
-  <div>
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"password confirmation", id:"signup_password" %></div>
-
-    <div>
-    <%= f.text_field :fname, autocomplete: "off", placeholder:"first name", id:"signup_fname" %></div>
-
-    <div>
-    <%= f.text_field :lname, autocomplete: "off", placeholder:"last name", id:"signup_lname" %></div>
-
-  <div><%= f.submit "Sign up" ,id:"login_submit_box"%></div>
-<% end %>
-
-      </div>
+        <img id="laptop" src="/images/laptop.png" alt="laptop">
     </div>
-    <footer align="center">
-      <h5>Terms</h5>
-      <h5>|</h5>
-      <h5>Privacy</h5>
-    </footer>
+    <div class="triWrapper"><div id="blueTriangle"></div></div>
   </div>
+  
+  <div id="aboutWrapper">   
+    <div id="aboutContent">
+      <h2>What is MachMail?</h2>
+      <p>MachMail is content from your favorite news or shopping sites, dressed up as an email client. </p>
+      <p>Instead of an inbox full of emails, you get an inbox full of the latest news from your favorite sites. So while you're getting your fill of top headlines, it looks like business as usual to those around you.</p>
+      <p>Simply put, MachMail is the best way to look like your being productive,
+      since actually being productive.</p>
+      <br>
+      <div class="homeButton homeButtonBlack">Check out the tutorial</div>
+    </div>
+  </div> 
+    
+  <div id="signupWrapper">
+    
+    <div class="blackTriWrapper"><div id="blackTriangle"></div></div>   
+    
+    <div id="signupContent">
+      <div id="signupForm">
+        <h2>Sign Up</h2>
+        <p>Ready to join? Great!<br>Just fill out the info below to get started.</p>
+        <p style="font-size:14px;">Already a member? <a class="homeLink" href="#">Sign in</a></p>
+        <br>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <div><%= f.email_field :email, autofocus: true, placeholder:"email (this will be your username)", class: 'signupTextInput'%></div>
+          <div><%= f.password_field :password, autocomplete: "off", placeholder:"password", class: 'signupTextInput' %></div>
+          <div><%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"password confirmation", class: 'signupTextInput' %></div>
+          <div><%= f.text_field :fname, autocomplete: "off", placeholder:"first name", class: 'signupTextInput' %></div>
+          <div><%= f.text_field :lname, autocomplete: "off", placeholder:"last name", class: 'signupTextInput' %></div>
+          <div><%= f.submit "Sign Me Up", class: 'homeButton wideButton' %></div>
+        <% end %>
+      </div>
+
+      <div id="loginForm">
+        <h2>Sign In</h2>
+        <p>Not a member? <a class="homeLink" href="#">Sign up</a></p>
+        <br>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div><%= f.email_field :email, autofocus: true, placeholder:"username (your email address)",  class: 'signupTextInput' %></div>
+          <div><%= f.password_field :password, autocomplete: "off", placeholder:"password", class: 'signupTextInput' %></div>
+          <% if devise_mapping.rememberable? -%>
+            <div><%= f.check_box :remember_me, class: ".signupCheckbox" %> <%= f.label :remember_me %></div>
+            <br>
+          <% end %>
+          <div><%= f.submit "Sign in", class: 'homeButton wideButton' %></div>
+        <% end %>
+      </div> 
+    </div>
+
+  </div>
+
+  <div class="push"></div>
+
+  <footer id="mainFooter">
+    <ul id="footerLinks">
+      <li class="footerLink">Terms</li>
+      <li class="footerLink">|</li>
+      <li class="footerLink">Services</li>
+    </ul>
+  </footer>
+
+  </div>
+  
 </body>
 </html>
-

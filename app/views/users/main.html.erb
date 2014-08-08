@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html style="min-width:0;" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MachMail</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Raleway:800,600,400' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#createaccount_button").click(function(){
+        $("#login_form").slideUp();
+        $("#signup_form").delay(500).animate({height:'show'});
+      });
+    });
+   </script>
+
+</head>
+<body style="min-width:0;">
+
+  <div id="mainWrapper">
+  
+  <nav id="mainNav">
+      <a href="/"><img id="logo" src="/images/logo-black.png" alt="MachMail"></a>
+      <ul id="navLinks">
+        <li class="navLink"><a href="#">Sign In</a></li>
+        <li class="navLink"><a href="#">Sign Up</a></li>
+      </ul>
+  </nav>
+  <!-- <nav id="mainNav">
+      <a href="/"><img id="logo" src="images/logo-black.png" alt=""></a>
+      <ul id="navLinks">
+        <li class="navLink"><a href="#">Sign In</a></li>
+        <li class="navLink"><a href="#">Sign Up</a></li>
+      </ul>
+  </nav> -->
+
+  <div id="welcomeWrapper">
+    <div id="welcomeContent">
+        <div id="leftCol">
+          <h1 class="welcomeH1">Welcome<br>to MachMail</h1>
+          <h3 class="welcomeH3">The best way to look productive, since actually being productive.</h3>
+          <div class="homeButton">See What We Mean</div>
+        </div>
+        <img id="laptop" src="images/laptop.png" alt="laptop">
+    </div>
+    <div class="triWrapper"><div id="blueTriangle"></div></div>
+  </div>
+  
+  <div id="aboutWrapper">   
+    <div id="aboutContent">
+      <h2>What is MachMail?</h2>
+      <p>MachMail is your favorite news or shopping site, dressed up as an email client.</p>
+      <p>Instead of an inbox full of emails, you get an inbox full of the latest articles that interest you. So while you get your fill of top headlines, those people looking over you sholder think you’re diligentely keeping up on those incoming emails.</p>
+      <p>Simply put, MachMail is the best way to look like your being productive,
+      since actually being productive.</p>
+      <br>
+      <div class="homeButton">Check out the tutorial</div>
+    </div>
+  </div> 
+    
+  <div id="signupWrapper">
+    <div class="blackTriWrapper"><div id="blackTriangle"></div></div>   
+    <div id="signupContent">
+      <h2>Sign Up</h2>
+      <form id="mainSignUpForm" action="">
+        <input type="text" placeholder="email (this will be your username)" name="email" id="signup_email"><br>
+        <input type="text" placeholder="first name" name="fname" id="signup_fname"><br>
+        <input type="text" placeholder="last name" name="lname" id="signup_lname"><br>
+        <input type="text" placeholder="password" name="password" id="signup_password"><br>
+        <input type="text" placeholder="confirm password" name="confirmPassword" id="signup_confirmPassword">
+      </form>
+      
+  </div> 
+
+  </div>
+  <div class="push"></div>
+  <footer id="mainFooter">
+    <ul id="footerLinks">
+      <li class="footerLink">Terms</li>
+      <li class="footerLink">|</li>
+      <li class="footerLink">Services</li>
+    </ul>
+  </footer>
+</body>
+</html>
