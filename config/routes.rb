@@ -32,8 +32,9 @@ Rails.application.routes.draw do
 
   get 'homepage' => 'users#homepage'
 
-  get 'mainpage' => 'users#main'
+  # get 'mainpage' => 'users#main'
 
+  get 'tutorial' => 'users#tutorial'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

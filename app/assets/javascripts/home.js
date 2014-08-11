@@ -34,8 +34,35 @@ $(document).on('ready page:load', function(){
 
   
   // $(".dropdownTitle").is(":hidden");
+
+  // fade the sign in and sign up forms in and out on home page
+  $(".loginFormTrigger").click(function() {
+    $('#signupForm').fadeOut(600, function(){
+      $('#loginForm').fadeIn(600);
+    });
+  });
+
+  $(".signUpFormTrigger").click(function() {
+    $('#loginForm').fadeOut(600, function(){
+      $('#signupForm').fadeIn(600);
+    });
+  });
+
+  // adds smooth scrolling to home page links
+  $(".scroll").click(function(event){
+    event.preventDefault();
+    //calculate destination place
+    var dest=0;
+    if($(this.hash).offset().top > $(document).height()-$(window).height()){
+        dest=$(document).height()-$(window).height();
+    }else{
+        dest=$(this.hash).offset().top;
+    }
+    //go to destination
+    $('html,body').animate({scrollTop:dest}, 1000,'swing');
+  });
   
-  // This slides the sidebar menus up and down
+  // This slides the sidebar menus up and down in MachMail Template
   $(".dropdownTitle").click(function(){
     if ( $(this).next("ul").is(":hidden") ) {
       $(this).next("ul").slideDown();
@@ -44,33 +71,35 @@ $(document).on('ready page:load', function(){
     }
   });
 
-  // adds active state to sidebar folders
+  // adds active state to sidebar folders in MachMail Template
   $(".dropdownItem a").each(function() {   
     if (this.href == window.location.href) {
         $(this).addClass("dropdownItemActive a");
     }
   });
 
-  // checks all the checkboxes
+  // checks all the checkboxes in MachMail Template
   $("#selectAll").click(function(){
     $(".myCheckbox").prop("checked",$("#selectAll").prop("checked"))
   })
 
-  // lets user return to inbox view when logo is clicked
+  // lets user return to inbox view when logo is clicked in MachMail Template
   $("#remove2").on("click", function(){
         $("#showup1").remove();
         $("#inbox").show();
   });
 
-  // This slides the forms on the user edit page up and down
-  $("i").click(function(){
-   // alert("hi")
-    if ( $(this).next(".editForm").is(":hidden") ) {
-      $(this).next(".editForm").slideDown();
-    } else {
-      $(this).next(".editForm").slideUp();
-    }
+  // dismiss flash messages
+  $(".flashMessages").click(function() {
+    $(this).slideUp(600);
   });
+
+  // dismiss devise_error_message
+  $("#error_explanation ul").append('<li><span class="dismissFlash">(Click to Dismiss)</span></li>');
+  $("#error_explanation").click(function() {
+    $(this).slideUp(600);
+  });
+  
 
 function clickable() {
     var stlg = parseInt($(".articles:last")[0].id.split("_")[1]) + 1;

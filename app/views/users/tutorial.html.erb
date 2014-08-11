@@ -1,0 +1,193 @@
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:600,500,400,300' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".followingWelcomeMessage").hide();
+			$("#tutorialGoButton").hide();
+			$("#tutorialStep1").hide();
+			$("#tutorial_step2").hide();
+			$("#tut1").hide();
+			$("#tut2").hide();
+			$("#demopic_1").hide();
+			$("#redbox_1").hide();
+			$("#greenbox_1").hide();
+			$("#greenbox_2").hide();
+			$("#orangebox_1").hide();
+			$("#blackbox_1").hide();
+			$("#instruction_black").hide();
+			$("#instruction_orange").hide();
+			$("#instruction_red").hide();
+			$("#instruction_green").hide();
+			$("#tutorial_last_message").hide();
+			$("#welcomeMessage").delay(500).animate({paddingLeft:"21%", opacity: "1"}, 'slow');
+			$(".followingWelcomeMessage").delay(750).animate({height:"show", opacity:"1"}, 'slow');
+			$("#tutorialGoButton").delay(1500).animate({opacity:"show"}, 'slow');
+
+			$("#tutorialGoButton").click(function(){
+				$(this).fadeOut();
+				$("#welcomeMessage").fadeOut();
+				$(".followingWelcomeMessage").fadeOut();
+
+				$("#tutorialStep1").delay(800).animate({height:"show"}, 'slow');
+				$("#tut1").delay(1500).animate({height:'show',marginTop:'40px'}, 1000, 'easeOutBounce');
+				$("#tut2").delay(2000).animate({height:"show",marginTop:'40px'}, 1000, 'easeOutBounce');
+			});
+
+			$("#tut1").click(function(){
+				$("#tutorialStep1").fadeOut();
+				$("#tut2").fadeOut();
+				$(this).delay(100).hide('explode', {pieces:20}, 400);
+				$("#tutorial_step2").delay(700).fadeIn().delay(1250).animate({marginLeft:'-500px'}).fadeOut();
+				$("#demopic_1").delay(3000).animate({width:"show", marginLeft:'+225px'});
+				$("#redbox_1").delay(4200).animate({width:"show",left:"+370px"});
+				$("#instruction_red").delay(5000).fadeIn();
+			});
+
+			$("#redbox_1").click(function(){
+				$(this).fadeOut();
+				$("#instruction_red").fadeOut();
+				$("#greenbox_1").delay(500).fadeIn();
+				$("#instruction_green").delay(500).fadeIn();
+				$("#greenbox_2").delay(800).fadeIn();
+			});
+
+			$("#greenbox_1").click(function(){
+				$(this).fadeOut();
+				$("#greenbox_2").fadeOut();
+				$("#instruction_green").fadeOut();
+				$("#instruction_orange").delay(500).fadeIn();
+				$("#orangebox_1").delay(500).fadeIn();
+			});
+
+			$("#orangebox_1").click(function(){
+				$(this).fadeOut();
+				$("#instruction_orange").fadeOut();
+				$("#blackbox_1").delay(500).fadeIn();
+				$("#instruction_black").delay(500).fadeIn();
+			});
+
+			$("#blackbox_1").click(function(){
+				$(this).fadeOut();
+				$("#instruction_black").fadeOut();
+				$("#demopic_1").fadeOut('slow');
+				$("#tutorial_last_message").delay(900).fadeIn('slow');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="mainWrapper">
+
+		<nav id="mainNav">
+	      <a href="/"><img id="logo" src="/images/logo-black.png" alt="MachMail"></a>
+	      <ul id="navLinks">
+	      	<% if current_user == nil %>
+	        	<li class="navLink"><a class="scroll" href="#">Sign In / Sign Up</a></li>
+	        <% else %>
+	        	<li class="navLink"><a href="/">Inbox</a></li>
+				<li class="navLink"><a href="/users/edit">Edit Profile</a></li>
+				<li class="navLink"><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
+	        <% end %>
+	      </ul>
+		</nav>
+
+		<% if notice %><p class="notice" ><%= notice %></p><% end %>
+		<% if alert %><p class="alert"><%= alert %></p><% end %>
+
+		<div id="tutorialWrapper">
+		  
+			<div id="tutorialContent">
+				<div id="welcomeMessage"><h1>Welcome to MachMail!</h1></div>
+				<div id="tutorialIntro">
+					<p class="followingWelcomeMessage">This tutorial will help get you started</p>
+					<p class="followingWelcomeMessage">Follow the directions and you'll be slacking in no time!</p>
+					<p class="followingWelcomeMessage">Are you ready?</p>
+					<div id="tutorialGoButton" class="clearButton">Let's Go!</div>
+				</div>
+				<div>
+					<div id="tutorialStep1">
+						<p>After signing up, you'll have the option to<br>
+						choose which template to use ...</p>
+						<img id="tut1" src="/images/demo1.png" alt="">
+						<img id="tut2" src="/images/demo2.png" alt="">
+					</div>
+	
+				</div>
+				<div>
+					<div id="tutorial_step2">
+						<h2>Congrats on choosing MachLook!</h2>
+						<h2>Lets get started</h2>
+					</div>
+					<div id="instruction_red">
+						<p>Click on a news outlet</p>
+						<p>to show their articles</p>
+						<p>in the 'main inbox'</p>
+						<br>
+						<br>
+						<p style="font-weight: 600">Click on an article in</p>
+						<p style="font-weight: 600">the red box to continue!</p>
+					</div>
+					<img id="demopic_1" src="/images/demo1.png" alt="">
+					<div id="redbox_1"></div>
+					<div id="greenbox_1"></div>
+					<div id="greenbox_2"></div>
+					<div id="instruction_green">
+						<p>Your "email" is shown here</p>
+						<br>
+						<p>Clicking the star hides your article!</p>
+						<br>
+						<br>
+						<p>Show article pictures by</p>
+						<p>clicking on the image buttton</p>
+						<br>
+						<br>
+						<p style="font-weight: 600">Click the article green box to continue</p>
+					</div>
+					<div id="orangebox_1"></div>
+					<div id="instruction_orange">
+						<p>If the star panic button </p>
+						<p>isn't enough, try the</p>
+						<p>inivisible button located</p>
+						<p>in the orange box!</p>
+						<br>
+						<br>
+						<p>Using this panic is irreversible!</p>
+						<br>
+						<p>The page must be refreshed before </p>
+						<p>you continue slacking!</p>
+						<br>
+						<br>
+						<p style="font-weight: 600">Click the secret orange</p>
+						<p style="font-weight: 600">box to continue!</p>
+					</div>
+					<div id="blackbox_1"></div>
+					<div id="instruction_black">
+						<p>Finally, the window button</p>
+						<p>toggles your menu</p>
+						<br>
+						<p>Here you can switch templates, </p>
+						<p>update and sign out!</p>
+						<br>
+						<br>
+						<p style="font-weight: 600">Click the black window box </p>
+						<p style="font-weight: 600">to finish the tutorial!</p>
+					</div>
+					<div id="tutorial_last_message">
+						<a href="machlook"><h1>Let the slacking begin...</h1></a>
+					</div>
+				</div>	
+			</div><!-- tutorialContent END -->
+		</div><!-- tutorialWrapper END -->
+		<footer id="mainFooter">
+	      <% randomNames = ["Mallory Bory", "Hsin Hsiao", "Victor Wang"].sample(3) %>
+	      <p>Created by (in totally random order) <%= "#{randomNames[0]}, #{randomNames[1]}, and #{randomNames[2]}." %></p>
+	    </footer>
+	</div><!-- mainWrapper END -->
+</body>
