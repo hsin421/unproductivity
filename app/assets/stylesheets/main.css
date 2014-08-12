@@ -7,7 +7,7 @@ html, body {
 	color: black;
 }
 
-/* BEGIN RESPONSIVE NAV STYLING */
+/********************* NAV STYLING **********************/
 #mainNav {
 	width: 100%;
 	position: fixed;
@@ -193,6 +193,10 @@ html, body {
 	overflow: auto;
 	padding: 60px 20px 90px 20px;
 }
+#aboutContent img {
+	width:290px;
+	padding:30px 0 40px 0;
+}
 
 /* SIGN UP SECTION STYLING*/
 #signupWrapper {
@@ -251,6 +255,7 @@ html, body {
 	font-weight: 400;
 	letter-spacing: 0;
 	margin-bottom: 0;
+	line-height: 14px;
 }
 /********************************************************/
 

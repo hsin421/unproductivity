@@ -26,8 +26,6 @@ Rails.application.routes.draw do
   devise_for :users, :except => [:sign_in]
 
 
-
-
   # root 'home#machmail'
   devise_scope :user do
     root to: "devise/sessions#new"
