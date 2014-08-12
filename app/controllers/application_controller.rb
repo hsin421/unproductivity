@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
-
+  def after_sign_in_path_for(user)
+        home_mach_path
+    end
 
   protected
 

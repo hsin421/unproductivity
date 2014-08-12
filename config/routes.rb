@@ -28,13 +28,14 @@ Rails.application.routes.draw do
 
 
 
-  root 'home#machmail'
+  # root 'home#machmail'
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 
   get 'homepage' => 'users#homepage'
 
-  # get 'mainpage' => 'users#main'
-
-  get 'tutorial' => 'users#tutorial'
+  get 'welcome' => 'users#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

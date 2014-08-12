@@ -429,10 +429,11 @@ html, body {
 
 /********************* MEDIA QUERIES ********************/
 @media (min-width: 0px) and (max-width: 965px) {
-	#welcomeContent {
+	/*#welcomeContent {
 		padding-top: 55px;
-	}
+	}*/
 	#leftCol {
+		padding-top: 0;
 		float: none;
 		width:100%;
 		text-align: center;

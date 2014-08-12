@@ -80,11 +80,6 @@
 				$("#demopic_1").fadeOut('slow');
 				$("#tutorial_last_message").delay(900).fadeIn('slow');
 			});
-
-
-
-		
-
 		});
 	</script>
 </head>
@@ -93,7 +88,7 @@
       <a href="/"><img id="logo" src="/images/logo-black.png" alt="MachMail"></a>
       <ul id="navLinks">
       	<% if current_user == nil %>
-        	<li class="navLink"><a class="scroll" href="#">Sign In / Sign Up</a></li>
+        	<li class="navLink"><a href="/users/sign_in">Sign In / Sign Up</a></li>
         <% else %>
         	<li class="navLink"><a href="/">Inbox</a></li>
 			<li class="navLink"><a href="/users/edit">Edit Profile</a></li>
