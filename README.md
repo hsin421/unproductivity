@@ -1,4 +1,6 @@
 Welcome to MachMail!
+=============================
+By Mallory B., Victor W. and Hsin H.
 
 MachMail is a fake email client designed to emulate functional email clients.
 
