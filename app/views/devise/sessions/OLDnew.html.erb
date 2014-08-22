@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project U</title>
+	
+	<link href="/assets/login.css" media="screen" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:800,400' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	 <script>
+	 	$(document).ready(function(){
+	 		$("#createaccount_button").click(function(){
+	 			$("#login_form").slideUp();
+	 			$("#signup_form").delay(500).animate({height:'show'});
+	 		});
+	 	});
+	 </script>
+</head>
+<body>
+	<div id="login_maincontainer">
+		<header>
+			<img src="/images/logo-black.png" style="height:20px;margin:18px 0px 0px 18px" alt="">
+			<nav>
+				<ul>
+					<li>About Mail</li>
+					<li>Features</li>
+					<li>Get the App</li>
+					<li>Help</li>
+				</ul>
+			</nav>
+			<% if notice %><p class="notice" ><%= notice %></p><% end %>
+		<% if alert %><p class="alert"><%= alert %></p><% end %>
+		</header>
+		<div id="login_contentholder">
+			<div id="login_adspace">
+				<img src="/images/logo-white.png" style="width:380px;padding:25px 25px 10px 25px;" alt="">
+				<h4>READ WHAT YOU WANT TO READ</h4>
+				<div id="login_sub_ad_box" align="center">
+					<h5>- FIND -</h5>
+					<h5>- READ -</h5>
+					<h5>- SLACK -</h5>
+				</div>
+				<div id="login_ad_button" align="center">Sign up now</div>
+			</div>
+			<div id="login_form" align="center">
+				<h1>Mach Mail</h1>
+				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+					<div>
+						<%= f.email_field :email, autofocus: true, placeholder:"Mach Mail ID",id:"email_id_box" %>
+					</div>
+					<div>
+						<%= f.password_field :password, autocomplete: "off", placeholder:"Password", id:"password_box" %>
+					</div>
+
+
+				  <% if devise_mapping.rememberable? -%>
+				    <div id="login_checkbox"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+				  <% end -%>
+
+				  <div><%= f.submit "Sign in",id:"login_submit_box" %></div>
+				<% end %>
+
+				
+				
+				<br>
+				<h6> - OR - </h6>
+				<div id="login_createaccount">
+					<div id="createaccount_button">Create New Account</div>
+				</div>
+				<p>Sign in with <a href="https://www.facebook.com">Facebook</a> or <a href="https://www.google.com">Google</a></p>
+			</div>
+			<div id="signup_form" align="center">
+				<h1>Mach Mail</h1>
+				<h3>Get started with your new Mach speed mail!</h3>
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div>
+  <%= f.email_field :email, autofocus: true, placeholder:"email", id:"signup_email" %></div>
+
+  <div>
+    <%= f.password_field :password, autocomplete: "off", placeholder:"password", id:"signup_password" %></div>
+
+  <div>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"password confirmation", id:"signup_password" %></div>
+
+    <div>
+    <%= f.text_field :fname, autocomplete: "off", placeholder:"first name", id:"signup_fname" %></div>
+
+    <div>
+    <%= f.text_field :lname, autocomplete: "off", placeholder:"last name", id:"signup_lname" %></div>
+
+  <div><%= f.submit "Sign up" ,id:"login_submit_box"%></div>
+<% end %>
+
+			</div>
+		</div>
+		<footer align="center">
+			<h5>Terms</h5>
+			<h5>|</h5>
+			<h5>Privacy</h5>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

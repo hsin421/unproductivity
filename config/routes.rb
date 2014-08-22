@@ -26,12 +26,14 @@ Rails.application.routes.draw do
   devise_for :users, :except => [:sign_in]
 
 
-
-
-  root 'home#machmail'
+  # root 'home#machmail'
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 
   get 'homepage' => 'users#homepage'
 
+  get 'welcome' => 'users#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

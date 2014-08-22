@@ -16,7 +16,7 @@
  *= require_self
  */
 
- @font-face {
+/* @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../assets/glyphicons-halflings-regular.eot');
   src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
@@ -28,16 +28,14 @@
 
 .notice {
 	color:red;
-	/*border:1px solid black;*/
 	width:222px;
 	margin: auto;
 }
 
 .alert {
 	color:red;
-	/*border:1px solid rgba(0,0,0,0.4);*/
 	width:387px;
 	margin: auto;
 	text-align: center;
 	
-}
+}*/

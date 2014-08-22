@@ -1,112 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Project U</title>
-	
-	<link href="/assets/login.css" media="screen" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Raleway:800,400' rel='stylesheet' type='text/css'>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	 <script>
-	 	$(document).ready(function(){
-	 		$("#createaccount_button").click(function(){
-	 			$("#login_form").slideUp();
-	 			$("#signup_form").delay(500).animate({height:'show'});
-	 		});
-	 	});
-	 </script>
-</head>
-<body>
-	<div id="login_maincontainer">
-		<header>
-			<img src="/images/logo-black.png" style="height:20px;margin:18px 0px 0px 18px" alt="">
-			<nav>
-				<ul>
-					<li>About Mail</li>
-					<li>Features</li>
-					<li>Get the App</li>
-					<li>Help</li>
-				</ul>
-			</nav>
-			<% if notice %><p class="notice" ><%= notice %></p><% end %>
-		<% if alert %><p class="alert"><%= alert %></p><% end %>
-		</header>
-		<div id="login_contentholder">
-			<div id="login_adspace">
-				<img src="/images/logo-white.png" style="width:380px;padding:25px 25px 10px 25px;" alt="">
-				<h4>READ WHAT YOU WANT TO READ</h4>
-				<div id="login_sub_ad_box" align="center">
-					<h5>- FIND -</h5>
-					<h5>- READ -</h5>
-					<h5>- SLACK -</h5>
-				</div>
-				<div id="login_ad_button" align="center">Sign up now</div>
-			</div>
-			<div id="login_form" align="center">
-				<h1>Mach Mail</h1>
-				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-					<div>
-						<%= f.email_field :email, autofocus: true, placeholder:"Mach Mail ID",id:"email_id_box" %>
-					</div>
-					<div>
-						<%= f.password_field :password, autocomplete: "off", placeholder:"Password", id:"password_box" %>
-					</div>
+<body id="mainBody">
 
+  <nav id="mainNav">
+      <a class="scroll" href="#mainBody"><img id="logo" src="/images/logo-black.png" alt="MachMail"></a>
+      <ul id="navLinks">
+        <li class="navLink"><a class="scroll" href="#blackTriangle">Sign In / Sign Up</a></li>
+      </ul>
+  </nav>
 
-				  <% if devise_mapping.rememberable? -%>
-				    <div id="login_checkbox"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-				  <% end -%>
-
-				  <div><%= f.submit "Sign in",id:"login_submit_box" %></div>
-				<% end %>
-
-				
-				
-				<br>
-				<h6> - OR - </h6>
-				<div id="login_createaccount">
-					<div id="createaccount_button">Create New Account</div>
-				</div>
-				<p>Sign in with <a href="https://www.facebook.com">Facebook</a> or <a href="https://www.google.com">Google</a></p>
-			</div>
-			<div id="signup_form" align="center">
-				<h1>Mach Mail</h1>
-				<h3>Get started with your new Mach speed mail!</h3>
-				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div>
-  <%= f.email_field :email, autofocus: true, placeholder:"email", id:"signup_email" %></div>
+  <!-- FLASH MESSAGES -->
+  <% if notice %>
+    <div class="flashMessages" id="flashNotice" >
+      <h2><%= notice %></h2>
+      <p><span class="dismissFlash">(Click to Dismiss)</span></p>
+    </div>
+  <% end %>
+  <% if alert %>
+    <div class="flashMessages" id="flashAlert">
+      <h2><%= alert %></h2>
+      <p><span class="dismissFlash">(Click to Dismiss)</span></p>
+    </div>
+  <% end %>
 
-  <div>
-    <%= f.password_field :password, autocomplete: "off", placeholder:"password", id:"signup_password" %></div>
+  <div id="mainWrapper">
 
-  <div>
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"password confirmation", id:"signup_password" %></div>
+    <!-- <nav id="mainNav">
+        <a href="/"><img id="logo" src="images/logo-black.png" alt=""></a>
+        <ul id="navLinks">
+          <li class="navLink"><a href="#">Sign In</a></li>
+          <li class="navLink"><a href="#">Sign Up</a></li>
+        </ul>
+    </nav> -->
 
-    <div>
-    <%= f.text_field :fname, autocomplete: "off", placeholder:"first name", id:"signup_fname" %></div>
+    <div id="welcomeWrapper">
+      <div id="welcomeContent">
+          <div id="leftCol">
+            <h1>Welcome to MachMail</h1>
+            <h4>Discreetly read content from your favorite websites.</h4>
+            <a class="scroll clearButton clearButton2" href="#blueTriangle">See What We Mean</a>
+          </div>
+          <img id="laptop" src="/images/laptop.png" alt="laptop">
+      </div>
+      <div class="triWrapper"><div id="blueTriangle"></div></div>
+    </div><!-- welcomeWrapper END -->
+    
+    <div id="aboutWrapper">   
+      <div id="aboutContent">
+        <h2>What is MachMail?</h2>
+        <img src="/images/disguise.png" alt="MachMail Disguise">
+        <p>MachMail is content from your favorite news or shopping sites disguised as an email client.</p>
+        <p>With two different "email templates" to choose from, MachMail allows you to covertly read articles from popular sites without being detected. Instead of an inbox full of emails, you get an inbox full of the freshest content from your favorite sites.</p>
+        <p>Whether you're in a classroom, or sitting in the office, let MachMail be your premiere choice for slacking.</p>
+        <br>
+        <a href="/homepage" class="clearButton clearButtonBlack">Check out the tutorial</a>
+      </div>
+    </div><!-- aboutWrapper END -->
+      
+    <div id="signupWrapper">
+      
+      <div class="blackTriWrapper"><div id="blackTriangle"></div></div>   
+      
+      <div id="signupContent">
+        <div id="signupForm">
+          <h2>Sign Up</h2>
+          <p>Ready to join? Great!<br>Just fill out your information below to get started.</p>
+          <p style="font-size:16px;margin-bottom:5px;">Already a member? <a class="loginFormTrigger clearLink">Sign in</a></p>
+          <br>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <!-- <%# devise_error_messages! %> -->
+            <div><%= f.email_field :email, placeholder:"email (this will be your username)", class: 'signupTextInput'%></div>
+            <div><%= f.password_field :password, autocomplete: "off", placeholder:"password", class: 'signupTextInput' %></div>
+            <div><%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"password confirmation", class: 'signupTextInput' %></div>
+            <div><%= f.text_field :fname, autocomplete: "off", placeholder:"first name", class: 'signupTextInput' %></div>
+            <div><%= f.text_field :lname, autocomplete: "off", placeholder:"last name", class: 'signupTextInput' %></div>
+            <div><%= f.submit "Sign Me Up", class: 'clearButton wideButton' %></div>
+          <% end %>
+        </div><!-- signupForm END -->
 
-    <div>
-    <%= f.text_field :lname, autocomplete: "off", placeholder:"last name", id:"signup_lname" %></div>
+        <div id="loginForm">
+          <h2>Sign In</h2>
+          <p>Not a member yet? <a class="signUpFormTrigger clearLink">Sign up</a></p>
+          <br>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div><%= f.email_field :email, placeholder:"username (your email address)",  class: 'signupTextInput' %></div>
+            <div><%= f.password_field :password, autocomplete: "off", placeholder:"password", class: 'signupTextInput' %></div>
+            <% if devise_mapping.rememberable? -%>
+              <div class="checkboxContainer"><%= f.check_box :remember_me %> <%= f.label :remember_me, class: 'checkboxLabel' %></div>
+              <br>
+            <% end %>
+            <div><%= f.submit "Sign in", class: 'clearButton wideButton' %></div>
+          <% end %>
+        </div><!-- loginForm END --> 
+      </div><!-- signupContent END -->
 
-  <div><%= f.submit "Sign up" ,id:"login_submit_box"%></div>
-<% end %>
+    </div><!-- signupWrapper END -->
 
-			</div>
-		</div>
-		<footer align="center">
-			<h5>Terms</h5>
-			<h5>|</h5>
-			<h5>Privacy</h5>
-		</footer>
-	</div>
+    <footer id="mainFooter">
+      <!-- <ul id="footerLinks">
+        <li class="footerLink">Terms</li>
+        <li class="footerLink">|</li>
+        <li class="footerLink">Services</li>
+      </ul> -->
+      <% randomNames = ["Mallory Bory", "Hsin Hsiao", "Victor Wang"].sample(3) %>
+      <p>Created by (in totally random order) <%= "#{randomNames[0]}, #{randomNames[1]}, and #{randomNames[2]}." %></p>
+    </footer>
+
+  </div><!-- mainWrapper END -->
+  
 </body>
-</html>
-
-
-
-
-
-
-

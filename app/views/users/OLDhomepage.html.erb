@@ -80,24 +80,27 @@
 				$("#demopic_1").fadeOut('slow');
 				$("#tutorial_last_message").delay(900).fadeIn('slow');
 			});
+
+
+
+		
+
 		});
 	</script>
 </head>
-<body id="tutorialBody">
-	<nav id="mainNav">
-      <a href="/"><img id="logo" src="/images/logo-black.png" alt="MachMail"></a>
-      <ul id="navLinks">
-      	<% if current_user == nil %>
-        	<li class="navLink"><a href="/users/sign_in">Sign In / Sign Up</a></li>
-        <% else %>
-        	<li class="navLink"><a href="/">Inbox</a></li>
-			<li class="navLink"><a href="/users/edit">Edit Profile</a></li>
-			<li class="navLink"><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
-        <% end %>
-      </ul>
-	</nav>
+<body>
 	<div id="tutorial_mastercontainer">
-		
+		<header>
+			<h1>Mach Mail</h1>
+			<nav>
+				<ul>
+					<li>About Mail</li>
+					<li>Features</li>
+					<li>Get the App</li>
+					<li>Help</li>
+				</ul>
+			</nav>
+		</header>
 		<div id="tutorial_mainbody">
 			<div id="tutorial_intro_message">
 				<h1 id="tutorial_intro_message_welcome">Welcome to Mach Mail</h1>
@@ -183,9 +186,10 @@
 				</div>
 			</div>	
 		</div>
-		<footer id="mainFooter">
-	      <% randomNames = ["Mallory Bory", "Hsin Hsiao", "Victor Wang"].sample(3) %>
-	      <p>Created by (in totally random order) <%= "#{randomNames[0]}, #{randomNames[1]}, and #{randomNames[2]}." %></p>
-	    </footer>
+		<footer align="center">
+			<h5>Terms</h5>
+			<h5>|</h5>
+			<h5>Privacy</h5>
+		</footer>
 	</div>
 </body>
