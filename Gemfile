@@ -28,7 +28,11 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'nokogiri'
+
+
 gem 'passenger'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

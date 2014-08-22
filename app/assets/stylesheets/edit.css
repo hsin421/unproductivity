@@ -1,16 +1,51 @@
+html, body {
+	min-width: 0;
+}
+
+/* BEGIN RESPONSIVE NAV STYLING */
+#mainNav {
+	width: 100%;
+	position: fixed;
+	background-color: white;
+	margin: 0;
+	padding: 20px;
+}
+
+#navLinks {
+	display: inline-block;
+	float: right;
+}
+
+.navLink {
+	padding-top: 3px; 
+	margin: 0 0 0 15px;
+	font-size: 14px;
+}
+
+.navLink a {
+	color: #2998F2;
+}
+
+.navLink a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	height: 22px;
+}
+/* END RESPONSIVE NAV STYLING */
+
 #edit_maincontainer {
 	background: #2998F2;
+	text-align: left;
 }
 
 #edit_contentholder {
-	padding: 30px;
+	padding: 90px 30px 30px 30px;
 	height: 100%;
-}
-
-#editFooter {
-	width: 100%;
-	padding: 15px;
-	background-color: white;
 }
 
 .editH2 {
@@ -22,67 +57,57 @@
 	letter-spacing: 1px;
 }
 
+.editH4 {
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: none;
+	margin-bottom: 15px;
+	color: white;
+	letter-spacing: 1px;
+}
+
+#plusMinus {
+	color: white;
+	display: inline-block;
+}
+
 .editButton {
 	padding: 10px;
 }
 
 .editButton {
-	border: 1px solid #666;
-	border-radius: 4px;
-	background: -webkit-linear-gradient(top, #ccc, #999);
+	border: 2px solid white;
+	border-radius: 8px;
+	background: rgba(255,255,255,0);
 	cursor: pointer;
-	font-size: 14px;
+	font-size: 16px;
 	letter-spacing: 1px;
-	font-weight: 600;
+	text-transform: uppercase;
+	font-weight: 500;
 	color:white;
-	padding:10px;
-}
-
-.editButton a:visited {
-	color:white;
+	padding:10px 10px 9px 10px;
 }
 
 .editButton:hover {
-	background: -webkit-linear-gradient(top, #999, #ccc);
+	background: rgba(0,0,0,.2);
+
 }
 
 .editLink a {
 	color: white;
 }
 
-/*########################################
-############### NAV BAR ################*/
-header {
-	width:100%;
-	height: 60px;
-	background-color: white;
-	/*border:1px solid black;*/
+/* BEGIN FOOTER STYLING */
+#mainFooter {
+	width: 100%;
+	padding: 20px;
+	background-color: black;
+	color: #666;
+	font-size: 12px;
+	text-align: center;
 }
-
-header h1 {
-	float: left;
-	margin-top: 18px;
-	margin-left: 20px;
-	letter-spacing: 2px;
-	font-weight: 800;
-}
-
-nav {
-	width: 400px;
-	/*border:1px solid green;*/
-	float: right;
-	margin-top: 18px;
-	text-align: right;
-	margin-right: 5px;
-	background-color: white;
-}
-
-nav ul li {
+.footerLink {
 	display: inline-block;
-	margin-left: 10px;
-	margin-right: 10px;
-	font-size: 13px;
-	font-weight: 300;
 }
-/*############# END NAV BAR ##############
-########################################*/
+/* END FOOTER STYLING */
+
