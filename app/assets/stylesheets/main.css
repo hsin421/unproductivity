@@ -1,0 +1,729 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#login_maincontainer h1, h3 {
+	color: black;
+}
+
+/********************* NAV STYLING **********************/
+#mainNav {
+	width: 100%;
+	position: fixed;
+	background-color: white;
+	margin: 0;
+	padding: 20px;
+	z-index: 1;
+	top:0;
+}
+
+#navLinks {
+	display: inline-block;
+	float: right;
+}
+
+.navLink {
+	padding-top: 3px; 
+	margin: 0 0 0 15px;
+	font-size: 14px;
+}
+
+.navLink a {
+	color: #2998F2;
+}
+
+.navLink a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	height: 22px;
+}
+/*#mainNav {
+	width: 100%;
+	position: fixed;
+	background-color: white;
+	margin: 0;
+	font-family: arial;
+}
+
+#navLinks {
+	display: inline-block;
+	float: right;
+	padding: 20px;
+}
+
+.navLink {
+	display: inline-block;
+	padding-top: 3px; 
+	margin: 0 0 0 15px;
+	font-size: 14px;
+}
+
+.navLink a {
+	color: #2998F2;
+}
+
+.navLink a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	height: 20px;
+	padding: 20px;
+}*/
+/********************************************************/
+
+
+/******************* GENERAL STYLING ********************/
+#mainBody {
+	min-width: 0;
+	background-color:#2998F2;
+}
+#mainWrapper {
+	min-height: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 70px;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+#mainWrapper p {
+	color: white;
+	font-size: 18px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-weight: 300;
+}
+.homeLink {
+	color: #1F55F2;
+}
+.homeLink:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+#mainWrapper h1, #mainWrapper h2 {
+	color: white;
+	font-size: 38px;
+	font-weight: 500;
+	margin-bottom: 22px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+#mainWrapper h3 {
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+#mainWrapper h4 {
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 25px;
+	line-height: 24px;
+	letter-spacing: 1px;
+	text-transform: none;
+}
+/********************************************************/
+
+
+/******************* HOMEPAGE STYLING *******************/
+
+/* WELCOME SECTION STYLING */
+#welcomeContent {
+	margin: 0 auto;
+	min-width: 350px;
+	max-width: 1060px;
+	padding: 45px 20px 40px 20px;
+	overflow: auto;
+	text-align: left;
+}
+#welcomeWrapper, #aboutWrapper {
+	background: #2998F2;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+#leftCol {
+	padding-top: 55px;
+	width: 28%;
+	display: inline-block;
+	float: left;
+}
+#laptop {
+	display: inline-block;
+	float: right;
+	width: 72%;
+	min-width: 350px;
+}
+.triWrapper {
+	width: 100%;
+	background-color: black;
+}
+#blueTriangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 60px 0 60px;
+	border-color: #2997f2 transparent transparent transparent;
+	margin: 0 auto;
+}
+
+/* ABOUT SECTION STYLING*/
+#aboutWrapper {
+	background: black;
+}
+#aboutContent {
+	margin: 0 auto;
+	min-width: 350px;
+	max-width: 750px;
+	overflow: auto;
+	padding: 60px 20px 90px 20px;
+}
+#aboutContent img {
+	width:290px;
+	padding:30px 0 40px 0;
+}
+
+/* SIGN UP SECTION STYLING*/
+#signupWrapper {
+	background: #2997f2;
+}
+#signupContent {
+	margin: 0 auto;
+	min-width: 350px;
+	width: 100%;
+	overflow: auto;
+	padding: 60px 20px 90px 20px;
+}
+#signupContent p {
+	margin-bottom: 12px;
+}
+#signupContent a {
+	font-weight: 500;
+	color: #135DA3;
+	cursor: pointer;
+	text-decoration: none;
+}
+#signupContent a:hover {
+	color: #ccc;
+}
+#blackTriangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 60px 0 60px;
+	border-color: black transparent transparent transparent;
+	margin: 0 auto;
+}
+.blackTriWrapper {
+	width: 100%;
+	background-color: #2997f2;
+}
+#loginForm, #signupForm {
+	min-height: 520px;
+}
+#loginForm {
+	display: none;
+}
+/********************************************************/
+
+
+/******************** FOOTER STYLING ********************/
+#mainFooter {
+	padding: 30px;
+	background-color: black;
+	text-align: center;
+}
+.footerLink, #mainFooter p {
+	display: inline-block;
+	font-size: 13px;
+	color: #555;
+	font-weight: 400;
+	letter-spacing: 0;
+	margin-bottom: 0;
+	line-height: 14px;
+}
+/********************************************************/
+
+
+/**************** EDIT INFO PAGE STYLING ****************/
+#editWrapper {
+	background: #2998F2;
+}
+#editContent {
+	min-width: 350px;
+	max-width: 900px;
+	padding: 30px 20px 20px 20px;
+	text-align: center;
+	margin: 0 auto;
+	text-align: center;
+}
+.editForm {
+	padding:40px 40px 45px 40px;
+	border: 2px solid white;
+	margin: 0 0 40px 0;
+}
+/********************************************************/
+
+
+/******************* FORM FIELD STYLING *****************/
+.signupTextInput {
+	min-width: 350px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 8px;
+	margin-bottom: 18px;
+	font-size: 14px;
+	font-weight: 300;
+	border: 2px white solid;
+}
+.signupTextInput:focus {
+	box-shadow: none;
+	outline: none;
+	border: 2px black solid;
+}
+.editForm input[type="checkbox"], #signupContent input[type="checkbox"]{
+	-webkit-appearance: none;
+	width: 16px;
+	height: 16px;
+	background-color: white;
+	border-radius: 2px;
+	border: 2px solid white;
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.editForm input[type="checkbox"]:checked, #signupContent input[type="checkbox"]:checked{
+	background: rgba(0,0,0,.5);
+}
+.checkboxLabel {
+	vertical-align: middle;
+	display: inline-block;
+	padding-top: 2px;
+}
+.checkboxContainer {
+	text-align: left;
+	min-width: 10px;
+	padding: 5px 10px 30px 10px;
+	margin: 0 auto;
+	color: white;
+	font-weight: 300;
+	letter-spacing: 1px;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 28px;
+}
+/********************************************************/
+
+
+/********************* BUTTON STYLING *******************/
+.clearButton {
+	border: 2px solid white;
+	border-radius: 8px;
+	background: rgba(255,255,255,0);
+	cursor: pointer;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 500;
+	color:white;
+	padding: 13px;
+	cursor: pointer;
+	display: inline-block;
+}
+.clearButton:hover, .clearButton a:hover {
+	background: rgba(0,0,0,.2);
+	text-decoration: none;
+	color: white;
+}
+.clearButtonBlack:hover {
+	background: rgba(255,255,255,.15);
+}
+.wideButton {
+	width: 350px;
+}
+/********************************************************/
+
+
+/************* devise_error_messages STYLING ************/
+#error_explanation {
+	text-align: center;
+	position: relative;
+	top: 61px;
+	width: 100%;
+	margin: 0 auto;
+	cursor: pointer;
+	z-index:0;
+	padding: 20px;
+	background-color: #BA3836;
+	color: white;
+	background-image: url('../images/diagonals.png');
+	background-size: 10px;
+	-webkit-box-shadow: inset 0px 0px 8px 1px rgba(50, 50, 50, 0.6);
+	-moz-box-shadow:    inset 0px 0px 8px 1px rgba(50, 50, 50, 0.6);
+	box-shadow:         inset 0px 0px 8px 1px rgba(50, 50, 50, 0.6);
+}
+#error_explanation h2 {
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+#error_explanation li {
+	color: white;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.dismissFlash {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+/********************************************************/
+
+
+/************* FLASH MESSAGE STYLING ************/
+.flashMessages {
+	text-align: center;
+	position: relative;
+	top: 61px;
+	width: 100%;
+	margin: 0 auto;
+	cursor: pointer;
+	z-index:0;
+	padding: 20px;
+	color: white;
+	background-image: url('../images/diagonals.png');
+	background-size: 10px;
+	-webkit-box-shadow: inset 0px 0px 8px 1px rgba(50, 50, 50, 0.6);
+	-moz-box-shadow:    inset 0px 0px 8px 1px rgba(50, 50, 50, 0.6);
+	box-shadow:         inset 0px 0px 8px 1px rgba(50, 50, 50, 0.6);
+}
+#flashNotice {
+	background-color: #1C8C71;
+}
+#flashNotice h2 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+#flashAlert {
+	background-color: #BA3836;
+}
+#flashAlert h2 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+/********************************************************/
+
+
+/********************* MEDIA QUERIES ********************/
+@media (min-width: 0px) and (max-width: 965px) {
+	/*#welcomeContent {
+		padding-top: 55px;
+	}*/
+	#leftCol {
+		padding-top: 0;
+		float: none;
+		width:100%;
+		text-align: center;
+	}
+	.clearButton2 {
+		margin-bottom: 40px;
+	}
+	#laptop {
+		width: 100%;
+	}
+	.editForm {
+		padding:0;
+		border: none;
+		margin: 10px 0 50px 0;
+	}
+}
+@media (min-width: 450px) and (max-width: 965px) {
+	.editForm {
+		padding: 30px 30px 35px 30px;
+		border: 2px solid white;
+		margin: 0 0 40px 0;
+	}
+}
+/********************************************************/
+
+
+/*************** UPDATED TUTORIAL STYLING ***************/
+/* TUTORIAL GENERAL STYLING*/
+#tutorialWrapper {
+	overflow: auto;
+	width:100%;
+	min-height: 665px;
+	background-color: #2998F2;
+}
+#tutorialContent {
+	overflow: auto;
+	width: 100%;
+	margin: 0
+}
+#tutorialIntro {
+	overflow: auto;
+	margin: 0 auto;
+	min-width: 1000px;
+	max-width: 1000px;
+	text-align: center;
+}
+/* TUTORIAL WELCOME STYLING*/
+#welcomeMessage h1 {
+	font-size: 58px;
+	color: white;
+	margin-bottom: 40px;
+}
+#welcomeMessage {
+	overflow: auto;
+	width: 100%;
+	min-width: 1000px;
+	padding-top: 150px;
+	opacity: 0;
+	text-align: left;
+	margin: auto 0;
+}
+#tutorialIntro p {
+	font-size: 32px;
+	color:white;
+	line-height: 34px;
+	opacity: 0;
+}
+#tutorialGoButton {
+	margin-top: 30px;
+	font-size: 25px;
+	opacity: 1;
+}
+/* TUTORIAL STEP 1 STYLING*/
+#tutorialStep1 {
+	margin: 0 auto;
+	min-width: 1000px;
+	max-width: 1000px;
+	text-align: center;
+	padding-top: 130px;
+	overflow: auto;
+}
+#tutorialStep1 p {
+	font-size: 32px;
+	color:white;
+	line-height: 40px;
+}
+
+#tut1 {
+	width: 480px;
+	top:-5000;
+	height: auto;
+	float:left;
+}
+#tut2 {
+	width: 480px;
+	top:-5000;
+	height: auto;
+	float:right;
+}
+#tut1:hover, #tut2:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+/* TUTORIAL STEP 2 STYLING*/
+#tutorial_step2 {
+	font-size: 28px;
+	color: white;
+	margin-left: 250px;
+	line-height: 40px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+#demopic_1{
+	width: 1000px;
+	height: 665px;
+	margin-right:0;
+	margin-top: -80px;
+}
+
+#redbox_1 {
+	position: absolute;
+	z-index: 10;
+	width:240px;
+	height: 53px;
+	border:2px solid red;
+	top:195px;
+}
+
+#redbox_1:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.1);
+}
+
+#instruction_red {
+	width:205px;
+	position: absolute;
+	z-index: 8;
+	border:2px solid red;
+	margin-left: 8px;
+}
+#instruction_red p{
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+}
+
+#greenbox_1 {
+	width:617px;
+	height: 461px;
+	border:2px solid green;
+	position: absolute;
+	z-index:9;
+	margin-left: 608px;
+	top:245px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#greenbox_1:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0);
+
+}
+
+#greenbox_2 {
+	border:2px solid green;
+	position: absolute;
+	z-index: 20;
+	width:30px;
+	height: 30px;
+	margin-left: 1195px;
+	top:188px;
+	background-color: rgba(255,255,255,0.5);
+}
+#instruction_green {
+	width: 205px;
+	position: absolute;
+	z-index: 8;
+	border:2px solid green;
+	margin-left: 8px;
+	top:310px;
+}
+
+#instruction_green p {
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+}
+
+#instruction_orange {
+	width:205px;
+	position: absolute;
+	z-index: 8;
+	border:2px dotted orange;
+	margin-left: 1228px;
+	top:130px;
+}
+
+#instruction_orange p {
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+}
+
+#orangebox_1 {
+	border:2px dotted orange;
+	position: absolute;
+	z-index: 10;
+	width:70px;
+	height: 70px;
+	margin-left: 1155px;
+	top:636px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#orangebox_1:hover {
+	background-color: black;
+	cursor: pointer;
+}
+
+
+#instruction_black {
+	width:205px;
+	position: absolute;
+	z-index: 10;
+	border:2px solid black;
+	margin-left: 8px;
+	top:100px;
+}
+
+#instruction_black p {
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+	
+}
+
+#blackbox_1 {
+	border:3px solid black;
+	position: absolute;
+	z-index: 10;
+	width:70px;
+	height: 20px;
+	margin-left: 530px;
+	top:60px;
+	
+}
+
+#blackbox_1:hover {
+	cursor:pointer;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#tutorial_last_message {
+	width:611px;
+	height: 150px;
+	padding:50px;
+	border:2px solid white;
+	border-style:groove;
+	margin:auto;
+	border-width: 10px;
+}
+
+#tutorial_last_message h1 {
+	color:white;
+	font-size: 35px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	
+}
+
+#tutorial_last_message:hover {
+	cursor: pointer;
+}
+
+#tutorial_last_message a{
+	text-decoration: none;
+}
+

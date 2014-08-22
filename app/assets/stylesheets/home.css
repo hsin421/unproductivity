@@ -5,7 +5,9 @@ html, body {
 	background-color: black;
 }
 
-
+#outlook_maincontainer {
+	font-family: 'Open Sans', sans-serif;
+}
 
 #blackscreen {
 	

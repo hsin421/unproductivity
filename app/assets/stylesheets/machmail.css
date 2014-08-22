@@ -3,7 +3,6 @@ html, body {
   min-width:0;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway';
   font-weight: 700;
@@ -21,7 +20,7 @@ hr {
   margin: 12px 0;
 }
 
-td:hover {
+.articles:hover {
   cursor:pointer;
 }
 
@@ -111,6 +110,11 @@ input[type="checkbox"]:focus {
   color: gray;
 }
 
+.dropdownTitle:hover, .dropdownItem:hover, .dropdownItem:hover, .dropdownItem a:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
 .dropdownItemActive {
   font-weight: bold;
   font-style: italic;
@@ -136,10 +140,6 @@ input[type="checkbox"]:focus {
   word-wrap: normal;  
 }
 
-#showup {
- 
-}
-
 #articleBody h3 {
   font-size: 14pt;
   text-transform: none;
@@ -163,18 +163,18 @@ input[type="checkbox"]:focus {
 }
 
 .articleImageHidden{
-    display: none;
+  display: none;
 }
 
 .articleImageShow {
-    padding-bottom: 20px;
-    padding-left: 5px;
+  padding-bottom: 20px;
+  padding-left: 5px;
 }
 
 .articleImageShow img {
-    max-height: 500px;
-    width: auto;
-    max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
 }
 
 .remove, #remove2 {
@@ -189,7 +189,6 @@ input[type="checkbox"]:focus {
 #remove2:hover {
   opacity: 1;
 }
-
 
 #photoTrigger {
   padding: 0;
