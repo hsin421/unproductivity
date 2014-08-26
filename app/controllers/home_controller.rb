@@ -126,7 +126,7 @@ class HomeController < ApplicationController
       url = bloomberg + news_provider.css(handle)[selected][:href]
     end 
     
-      body_json = open("http://api.diffbot.com/v3/article?token=8de6c6c3e5fcec13f7b786b833bb35f7&url=#{url}")
+      body_json = open("http://api.diffbot.com/v3/article?token=312f8c3ed4f41a3e19c3b0547724e568&url=#{url}")
       @body = JSON.parse(body_json.read)
       if @body["objects"][0]["html"]
       @text = @body["objects"][0]["html"]
@@ -287,7 +287,7 @@ end
    		@url = bloomberg + news_provider.css(handle)[selected][:href]
     end	
     if @url && pro != "jcrew"
-	    body_json = open("http://api.diffbot.com/v3/article?token=8de6c6c3e5fcec13f7b786b833bb35f7&url=#{@url}")
+	    body_json = open("http://api.diffbot.com/v3/article?token=312f8c3ed4f41a3e19c3b0547724e568&url=#{@url}")
 	    @body = JSON.parse(body_json.read)	    
 	    if @body["objects"][0]["html"]
 	    @text = @body["objects"][0]["html"]
@@ -305,7 +305,7 @@ end
 			@image = "http://placekitten.com/g/300/400"
 		end
     elsif @url && pro == "jcrew"
-    	body_json = open("http://api.diffbot.com/v3/product?token=8de6c6c3e5fcec13f7b786b833bb35f7&url=#{@url}")
+    	body_json = open("http://api.diffbot.com/v3/product?token=312f8c3ed4f41a3e19c3b0547724e568&url=#{@url}")
 	    @body = JSON.parse(body_json.read)
 	    if @body["objects"][0]["text"]
 	    @price = @body["objects"][0]["offerPrice"]
