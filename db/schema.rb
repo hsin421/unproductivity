@@ -12,6 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20140731192156) do
+  enable_extension "plpgsql"
 
   create_table "content_providers", force: true do |t|
     t.string   "name"
