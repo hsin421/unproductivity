@@ -184,8 +184,8 @@
 			</div>	
 		</div>
 		<footer id="mainFooter">
-	      <% randomNames = ["Mallory Bory", "Hsin Hsiao", "Victor Wang"].sample(3) %>
-	      <p>Created by (in totally random order) <%= "#{randomNames[0]}, #{randomNames[1]}, and #{randomNames[2]}." %></p>
+	      <% randomNames = ["<a href='http://github.com/MAB33'>Mallory Bory</a>", "<a href='http://github.com/hsin421'>Hsin Hsiao</a>", "<a href='http://github.com/v-wang'>Victor Wang</a>"].sample(3) %>
+	      <p>Created by (in totally random order) <%= randomNames[0].html_safe %>, <%= randomNames[2].html_safe %> and <%= randomNames[1].html_safe %></p>
 	    </footer>
 	</div>
 </body>
