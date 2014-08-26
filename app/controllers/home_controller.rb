@@ -1,5 +1,5 @@
 require 'open-uri'
-require 'JSON'
+
 class HomeController < ApplicationController
 	before_action :authenticate_user!
   def index
