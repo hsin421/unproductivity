@@ -21,6 +21,7 @@ development:
 #   <<: *default
 #   database: db/test.sqlite3
 
-default: &default
-  adapter: postgresql
-  encoding: unicode
+production:
+  <<: *default
+  database: myapp_production
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
