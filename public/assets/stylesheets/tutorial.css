@@ -1,0 +1,323 @@
+#tutorial_mainbody {
+	margin-top: 60px;
+	width:100%;
+	height: 665px;
+	background-color: #2998F2;
+}
+/*########################################
+############### NAV BAR ################*/
+/*header {
+	width:100%;
+	height: 60px;
+
+}
+
+header h1 {
+	float: left;
+	margin-top: 18px;
+	margin-left: 20px;
+	letter-spacing: 2px;
+	font-weight: 800;
+}
+
+nav {
+	width: 400px;
+
+	float: right;
+	margin-top: 18px;
+	text-align: right;
+	margin-right: 5px;
+
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 13px;
+	font-weight: 300;
+}*/
+/*############# END NAV BAR ##############
+########################################*/
+
+
+
+/*########################################
+############### FOOTER BAR ##############*/
+/*footer {
+	width: 100%;
+}
+
+footer h5 {
+	font-size: 10px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	display: inline-block;
+	margin-top: 9px;
+}*/
+/*############ END FOOTER BAR ############
+########################################*/
+
+
+#tutorial_intro_message h1 {
+	font-size: 55px;
+	color:white;
+	letter-spacing: 1px;
+	padding-top: 100px;
+	margin-bottom: 100px;
+	/*margin-left: 250px;*/
+	opacity: 0;
+}
+
+#tutorial_intro_message p {
+	font-size: 30px;
+	color:white;
+	letter-spacing: 1px;
+	line-height: 40px;
+	margin-left: 250px;
+	opacity: 0;
+}
+
+#tutorial_intro_message h3 {
+	font-size: 30px;
+	width: 95px;
+	height: 70px;
+	color: white;
+	letter-spacing: 1px;
+	margin-left: 600px;
+	padding: 20px;
+	border:2px solid white;
+	border-radius: 20px;
+	opacity: 1;
+	font-weight: 800;
+}
+
+#tutorial_intro_message h3:hover {
+	cursor: pointer;
+	/*background-color: #1892F5;*/
+	background-color: rgba(255,255,255,0.2);
+	color:black;
+	font-weight: 800;
+	letter-spacing: 1px;
+
+}
+
+#tutorial_step1 {
+	font-size: 28px;
+	color: white;
+	margin-left: 250px;
+	margin-top: 50px;
+	line-height: 40px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+#demo_1 {
+	width: 500px;
+	height: 350px;
+	position: absolute;
+	top:0;
+	left: 250px;
+}
+
+#demo_2 {
+	width: 500px;
+	height: 350px;
+	position: absolute;
+	top:0;
+	left: 800px;
+}
+
+#demo_1:hover, #demo_2:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#tutorial_step2 {
+	font-size: 28px;
+	color: white;
+	margin-left: 250px;
+	line-height: 40px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+#demopic_1{
+	width: 1000px;
+	height: 665px;
+	margin-right:0;
+	margin-top: -80px;
+}
+
+#redbox_1 {
+	position: absolute;
+	z-index: 10;
+	width:240px;
+	height: 53px;
+	border:2px solid red;
+	top:195px;
+}
+
+#redbox_1:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.1);
+}
+
+#instruction_red {
+	width:205px;
+	position: absolute;
+	z-index: 8;
+	border:2px solid red;
+	margin-left: 8px;
+}
+#instruction_red p{
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+}
+
+#greenbox_1 {
+	width:617px;
+	height: 461px;
+	border:2px solid green;
+	position: absolute;
+	z-index:9;
+	margin-left: 608px;
+	top:245px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#greenbox_1:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0);
+
+}
+
+#greenbox_2 {
+	border:2px solid green;
+	position: absolute;
+	z-index: 20;
+	width:30px;
+	height: 30px;
+	margin-left: 1195px;
+	top:188px;
+	background-color: rgba(255,255,255,0.5);
+}
+#instruction_green {
+	width: 205px;
+	position: absolute;
+	z-index: 8;
+	border:2px solid green;
+	margin-left: 8px;
+	top:310px;
+}
+
+#instruction_green p {
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+}
+
+#instruction_orange {
+	width:205px;
+	position: absolute;
+	z-index: 8;
+	border:2px dotted orange;
+	margin-left: 1228px;
+	top:130px;
+}
+
+#instruction_orange p {
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+}
+
+#orangebox_1 {
+	border:2px dotted orange;
+	position: absolute;
+	z-index: 10;
+	width:70px;
+	height: 70px;
+	margin-left: 1155px;
+	top:636px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#orangebox_1:hover {
+	background-color: black;
+	cursor: pointer;
+}
+
+
+#instruction_black {
+	width:205px;
+	position: absolute;
+	z-index: 10;
+	border:2px solid black;
+	margin-left: 8px;
+	top:100px;
+}
+
+#instruction_black p {
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	color:white;
+	margin-left: 8px;
+	
+}
+
+#blackbox_1 {
+	border:3px solid black;
+	position: absolute;
+	z-index: 10;
+	width:70px;
+	height: 20px;
+	margin-left: 530px;
+	top:60px;
+	
+}
+
+#blackbox_1:hover {
+	cursor:pointer;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#tutorial_last_message {
+	width:611px;
+	height: 150px;
+	padding:50px;
+	border:2px solid white;
+	border-style:groove;
+	margin:auto;
+	border-width: 10px;
+}
+
+#tutorial_last_message h1 {
+	color:white;
+	font-size: 35px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	
+}
+
+#tutorial_last_message:hover {
+	cursor: pointer;
+}
+
+#tutorial_last_message a{
+	text-decoration: none;
+}
+
+
+
+
+
+

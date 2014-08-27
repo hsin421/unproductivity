@@ -1,0 +1,232 @@
+html, body {
+  background: white;
+  min-width:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 16pt;
+  margin-top: 9px;
+}
+
+hr {
+  height: 1px;
+  background-color: #dddddd;
+  margin: 12px 0;
+}
+
+.articles:hover {
+  cursor:pointer;
+}
+
+.tableHeader{
+  font-weight: 600;
+  padding: 0;
+  margin: 0 0 2px 0;
+  font-size: 11pt;
+  font-family: "Raleway", sans-serif;
+}
+
+.form-control, .btn-default {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+input[type="checkbox"]:focus {
+  outline:none;
+}
+
+.myCheckbox {
+  -webkit-appearance: none;
+  border: 1px solid #dddddd;
+  background-color: #e8e8e8;
+  height:13px;
+  width:13px;
+}
+
+.myCheckbox:checked {
+  -webkit-appearance: none;
+  border: 1px solid #dddddd;
+  background-color: #666;
+  outline:none;
+}
+
+#mailboxTools {
+  overflow: auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #dddddd;
+}
+
+.buttonWrapper {
+  margin-right: 4%;
+  float: left;
+}
+
+.buttonWrapper p{
+  display: inline-block;
+}
+
+.btn-default {
+  display: inline-block;
+  border: 1px solid #dddddd;
+  background-color: #e8e8e8;
+  font-weight: bold;
+  cursor: default;
+  box-shadow: none;
+}
+
+#filter {
+  float: right;
+  width: 40%;
+}
+
+#filterBar {
+  width:100%;
+  outline:none;
+  box-shadow: none;
+  padding: 4px;
+  border: 1px solid #dddddd;
+  cursor: default;
+}
+
+#filterBar:focus, #filterBar:hover {
+  outline:none;
+  border-color:#adadad;
+}
+
+.dropdownTitle, .dropdownItem {
+  cursor: pointer;
+}
+
+.dropdownItem, .dropdownItem a {
+  list-style: none;
+  line-height: 22pt;
+  color: gray;
+}
+
+.dropdownTitle:hover, .dropdownItem:hover, .dropdownItem:hover, .dropdownItem a:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.dropdownItemActive {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.nav-sidebar > li {
+  padding-right: 20px;
+  padding-left: 20px;
+  line-height: 22pt;
+  font-weight: bold;
+}
+
+.nav > .nav-sidebar > ul {
+  border-bottom: 1px solid gray;
+}
+
+.navbar, .navbar-inverse, .navbar-fixed-top {
+  font-family: 'Raleway';
+  background: rgba(0,0,0,.86);
+}
+
+#articleBody {
+  word-wrap: normal;  
+}
+
+#articleBody h3 {
+  font-size: 14pt;
+  text-transform: none;
+  margin: 8px 0;
+}
+
+.emailIcons {
+  padding-top: 5px;
+}
+
+#articleBody .fa {
+  padding-left: 5px;
+ }
+
+#articleBody h5 {
+  color: gray;
+  font-size: 11pt;
+  text-transform: none;
+  margin: 0 0 6px 0;
+  clear: both;
+}
+
+.articleImageHidden{
+  display: none;
+}
+
+.articleImageShow {
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+
+.articleImageShow img {
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+}
+
+.remove, #remove2 {
+  cursor: pointer;
+}
+
+#remove2 {
+  height: 18px;
+  opacity: .7;
+}
+
+#remove2:hover {
+  opacity: 1;
+}
+
+#photoTrigger {
+  padding: 0;
+  margin: 15px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdownItem {
+  padding-left: 30px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    padding-top: 10px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 990px) {
+  .sidebar {
+    padding-top: 10px;
+    padding-left: 25px;
+  }
+  #filter {
+  clear: both;
+  width: 100%;
+  margin-top: 15px;
+  }
+  #nextEmails {
+    float: right;
+    margin-right: 0; 
+  }
+}
+
+
+
+  
+
+
+

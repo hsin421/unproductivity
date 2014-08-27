@@ -1,0 +1,306 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	min-width: 1300px;
+	font-family: 'Raleway', sans-serif;
+	background-color: white;
+}
+
+
+/*########################################
+############### NAV BAR ################*/
+header {
+	width:100%;
+	height: 60px;
+	/*border:1px solid black;*/
+}
+
+header h1 {
+	float: left;
+	margin-top: 18px;
+	margin-left: 20px;
+	letter-spacing: 2px;
+	font-weight: 800;
+}
+
+nav {
+	width: 400px;
+	/*border:1px solid green;*/
+	float: right;
+	margin-top: 18px;
+	text-align: right;
+	margin-right: 5px;
+
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 13px;
+	font-weight: 300;
+}
+/*############# END NAV BAR ##############
+########################################*/
+
+
+
+
+/*########################################
+############### FOOTER BAR ##############*/
+footer {
+	width: 100%;
+}
+
+footer h5 {
+	font-size: 10px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	display: inline-block;
+	margin-top: 9px;
+}
+/*############ END FOOTER BAR ############
+########################################*/
+
+
+
+
+/*########################################
+############### LOGIN BOX ################*/
+#login_contentholder {
+	width: 100%;
+	height: 665px;
+	/*border: 1px solid red;*/
+	background: url(../images/officecube.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#login_form {
+	width: 248px;
+	height: 452px;
+	border: 2px solid rgb(120,120,120);
+	float: right;
+	margin-top: 15px;
+	margin-right: 310px;
+	background-color: white;
+	border-radius: 5px;
+	/*display: none;*/
+}
+
+#login_form h1 {
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 2px;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+#login_form p {
+	margin-top: 10px;
+	font-size:13px;
+	font-weight: 400;
+}
+#email_id_box, #password_box {
+	width: 200px;
+	height: 28px;
+	border-style: solid;
+	border-color: rgb(200,200,200);
+	border-radius: 4px;
+	border-width: 1px;
+	margin-top: 14px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+#login_checkbox {
+	margin-top: 15px;
+	width: 120px;
+	/*border: 1px solid red;*/
+	font-size: 12px;
+	margin-right: 95px;
+}
+
+#login_submit_box {
+	width: 210px;
+	height: 30px;
+	border: 1px solid #008db2;
+	border-radius: 4px;
+	background: -webkit-linear-gradient(top, #00c9fe, #008db2);
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 800;
+	color:white;
+	margin-top: 30px;
+}
+
+#login_submit_box:hover {
+	background: #00a1cb;
+}
+#login_createaccount {
+	width: 210px;
+	height: 68px;
+	border-top: 1px solid rgb(200,200,200);
+	border-bottom: 1px solid rgb(200,200,200);
+	margin-top: 34px;
+	padding-top: 18px;
+}
+
+#login_createaccount a {
+	text-decoration: none;
+}
+
+#createaccount_button {
+	width: 210px;
+	height: 30px;
+	border: 1px solid #6b9c00;
+	border-radius: 4px;
+	background: -webkit-linear-gradient(top, #8fcf00, #6b9c00);
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 800;
+	color:white;
+	padding-top:6px;
+}
+
+#createaccount_button a:visited {
+	color:white;
+}
+
+#createaccount_button:hover {
+	background: #7db500;
+}
+/*############ END LOGIN BOX #############
+########################################*/
+
+
+
+
+/*########################################
+############## SIGN UP BOX ##############*/
+#signup_form {
+	width: 248px;
+	height: 452px;
+	border: 2px solid rgb(120,120,120);
+	float: right;
+	margin-top: 15px;
+	margin-right: 310px;
+	background-color: white;
+	border-radius: 5px;
+	display: none;
+}
+
+#signup_form h1 {
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 2px;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+#signup_email, #signup_password, #signup_fname, #signup_lname, #signup_submit_box {
+		width: 200px;
+	height: 28px;
+	border-style: solid;
+	border-color: rgb(200,200,200);
+	border-radius: 4px;
+	border-width: 1px;
+	margin-top: 14px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+#signup_submit_box {
+	width: 210px;
+	height: 30px;
+	border: 1px solid #008db2;
+	border-radius: 4px;
+	background: -webkit-linear-gradient(top, #00c9fe, #008db2);
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 800;
+	color:white;
+}
+
+#signup_form h3 {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+/*############ END SIGN UP BOX ###########
+########################################*/
+
+
+
+
+/*########################################
+################ AD BOX ################*/
+#login_adspace {
+	width: 400px;
+	height: 300px;
+	/*border: 2px solid red;*/
+	float: left;
+	margin-left: 300px;
+	margin-top: 100px;
+	background-color: rgba(0,0,0,0.7);
+	/*border-width: 2px;
+	border-style: ridge;*/
+	border-radius: 5px;
+}
+
+#login_adspace h2 {
+	color:white;
+	font-weight: 800;
+	font-size: 70px;
+	margin-left: 30px;
+	margin-top: 20px;
+	letter-spacing: 4px;
+}
+
+#login_adspace h4 {
+	font-size: 20px;
+	font-weight: 400;
+	color: white;
+	margin-left: 30px;
+	margin-top: 8px;
+}
+
+#login_adspace h5 {
+	font-size: 30px;
+	font-weight: 800;
+	color: white;
+	line-height: 40px;
+}
+
+#login_sub_ad_box {
+	width: 320px;
+	height: 130px;
+	border: 2px dotted white;
+	margin-left: 30px;
+	margin-top: 12px;
+}
+
+#login_ad_button {
+	width: 80px;
+	height: 22px;
+	margin-left: 270px;
+	margin-top: 8px;
+	border: 1px solid red;
+	font-size: 12px;
+	padding-top: 4px;
+	background-color: #f18d05;
+	color: white;
+}
+/*################ END AD BOX ############
+########################################*/
+
+
+
+
+
+
+
+
